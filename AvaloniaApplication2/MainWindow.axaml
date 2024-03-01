@@ -1,0 +1,104 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication2.MainWindow"
+        Title="AvaloniaApplication2">
+    
+
+
+    <!-- Main Grid -->
+    <Grid>
+        <!-- Grid for buttons representing video games -->
+        <ScrollViewer Background="Indigo" Width="510" HorizontalAlignment="Left" VerticalScrollBarVisibility="Auto">
+            <Grid Name="GamesGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <!-- Columns for game buttons -->
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </ScrollViewer>
+
+        <!-- UI elements for search and filtering -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10, 10, 20, 10">
+            <!-- Search TextBox -->
+            <TextBox Name="SearchTextBox" Text="🔎 Search by title" Width="200" Margin="5" GotFocus="SearchTextBox_GotFocus"
+                     LostFocus="SearchTextBox_LostFocus" TextChanged="SearchTextBox_TextChanged"/>
+            <!-- Order ComboBox -->
+            <ComboBox Name="OrderComboBox" SelectionChanged="OrderComboBox_SelectionChanged" PlaceholderText="🜄 Order by" Width="200" Margin="5"/>
+        </StackPanel>
+
+        <!-- UI elements for displaying video game attributes -->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 10, 20, 10">
+            <!-- Border for game attributes -->
+            <Border BorderBrush="Purple" BorderThickness="2" CornerRadius="50" Padding="40">
+                <StackPanel>
+                    <!-- Director -->
+                    <TextBlock Text="Director:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="Director" Text="No data" Margin="0,0,0,5" />
+
+                    <!-- Release Year -->
+                    <TextBlock Text="Release Year:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="ReleaseYear" Text="No data" Margin="0,0,0,5"/>
+
+                    <!-- Rating -->
+                    <TextBlock Text="Rating:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="Rating" Text="No data" Margin="0,0,0,5" />
+
+                    <!-- Multiplayer -->
+                    <TextBlock Text="Multiplayer:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="Multiplayer" Text="No data" Margin="0,0,0,5" />
+
+                    <!-- Genre -->
+                    <TextBlock Text="Genre:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="Genre" Text="No data" Margin="0,0,0,5" />
+
+                    <!-- Description -->
+                    <TextBlock Text="Description:" FontSize="20" FontWeight="Bold"/>
+                    <TextBlock Name="Description" Text="No data" Margin="0,0,0,0" />
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- Count Information -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="25">
+            <TextBlock Text="Count: " FontWeight="Bold"/>
+            <TextBlock Name="Count" Text="No data" Margin="0,0,10,5" />
+        </StackPanel>
+
+        <!-- StackPanel for Title, Image, and Navigation Buttons -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0, 0, 20, 0">
+            <!-- Title -->
+            <TextBlock FontSize="20" FontFamily="Impact" Name="Title" Text="No data" />
+            <!-- Image Border -->
+            <Border CornerRadius="10" ClipToBounds="True">
+                <Image Name="GameImage" Width="500" Height="500" Stretch="UniformToFill"/>
+            </Border>
+            <!-- Navigation Buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Name="First" Content="◄|" Background="Indigo" CornerRadius="50" Click="First_OnClick"/>
+                <Button Name="Previous" Content="◄" Background="DarkOrchid" CornerRadius="50" Click="Previous_OnClick"/>
+                <Button Name="Next" Content="►" Background="DarkOrchid" CornerRadius="50" Click="Next_OnClick"/>
+                <Button Name="Last" Content="|►" Background="Indigo" CornerRadius="50" Click="Last_OnClick"/>
+            </StackPanel>
+        </StackPanel>
+
+        <!-- Action Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10, 10, 20, 10">
+            <!-- Add Button -->
+            <Button Name="Add" Content="Add" Background="DarkCyan" Click="Add_OnClick" />
+            <!-- Modify Button -->
+            <Button Name="Modify" Content="Modify" Background="Peru" Click="Modify_OnClick" />
+            <!-- Delete Button -->
+            <Button Name="Delete" Content="Delete" Background="DarkRed" Click="Delete_OnClick"/>
+        </StackPanel>
+
+        <!-- Save Changes Button -->
+        <Button Name="SaveChanges" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10, 10, 20, 10"
+                Content="Save Changes" Click="SaveChanges_OnClick"/>
+    </Grid>
+</Window>

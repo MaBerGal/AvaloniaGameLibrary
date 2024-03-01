@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaApplication2/AddWindow.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/Alert.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/App.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/MainWindow.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/Models/AddWindiow.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/Models/AddWindow.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+        <entry key="AvaloniaApplication2/ModifyWindow.axaml" value="AvaloniaApplication2/AvaloniaApplication2.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

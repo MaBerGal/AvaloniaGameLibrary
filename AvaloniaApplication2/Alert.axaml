@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Class="AvaloniaApplication2.Alert"
+        Title="Alert"
+        Width="375" Height="85"
+        MaxWidth="375" MaxHeight="85">
+
+    <!-- StackPanel for organizing UI elements -->
+    <StackPanel Margin="10">
+        <!-- TextBlock to display alert message -->
+        <TextBlock Name="AlertText" HorizontalAlignment="Center" Text="Sample Text" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+        
+        <!-- StackPanel for OK and Cancel buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <!-- OK Button -->
+            <Button Name="OkButton" Click="OkButton_Click" Background="LimeGreen" Content="OK" HorizontalContentAlignment="Center" MinWidth="75" Margin="0,0,10,0"/>
+            
+            <!-- Cancel Button -->
+            <Button Name="CancelButton" Click="CancelButton_Click" Content="Cancel" HorizontalContentAlignment="Center" MinWidth="75"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
